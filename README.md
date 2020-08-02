@@ -17,19 +17,22 @@ Code based on https://github.com/thien94/vision_to_mavros
 
 1. Install librealsense by following instructions on https://github.com/IntelRealSense/librealsense/blob/master/doc/distribution_linux.md
 
-a)If using manifold 2C (Intel CPU), follow instructions as normal.
+	a)If using manifold 2C (Intel CPU), follow instructions as normal.
 
-b)If using manifold 2G (Nvidia Jetson GPU), use `sudo apt-get install librealsense2-dev`
-instead of `sudo apt-get install librealsense2-dkms`. For more info, refer to https://github.com/IntelRealSense/librealsense/blob/master/doc/installation_jetson.md
+	b)If using manifold 2G (Nvidia Jetson GPU), use `sudo apt-get install librealsense2-dev`
+	instead of `sudo apt-get install librealsense2-dkms`. For more info, refer to https://github.com/IntelRealSense/librealsense/blob/master/doc/installation_jetson.md
 
 2. Install ddynamic_reconfigure using `sudo apt-get update apt-get install ros-kinetic-ddynamic-reconfigure`
 
 3. In QGCcontrol, follow steps here https://dev.px4.io/v1.9.0/en/ros/external_position_estimation.html#ekf2-tuningconfiguration
 
-a) Set EKF2_AID_MASK to vision position fusion and vision yaw fusion
-b) Set EKF2_HGT_MODE to Vision to use the vision a primary source for altitude estimation.
-c) Set EKF2_EV_POS_X, EKF2_EV_POS_Y, EKF2_EV_POS_Z with the position of the vision sensor with respect to the robot's body frame using ned convention.
-d) (Optional) Set EKF2_EV_DELAY if needed
+	a) Set EKF2_AID_MASK to vision position fusion and vision yaw fusion
+
+	b) Set EKF2_HGT_MODE to Vision to use the vision a primary source for altitude estimation.
+
+	c) Set EKF2_EV_POS_X, EKF2_EV_POS_Y, EKF2_EV_POS_Z with the position of the vision sensor with respect to the robot's body frame using ned convention.
+
+	d) (Optional) Set EKF2_EV_DELAY if needed
 
 ## Normal Steps
 
